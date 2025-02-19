@@ -1,7 +1,12 @@
 let a = 10;
+
 console.log(a);
+var test = 20;
+
 {
-  let a = 20;
-  console.log(a);
+  let test = 100;
+  console.log(test);
 }
-console.log(a);
+
+console.log(test);
+
