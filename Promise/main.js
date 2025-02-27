@@ -1,9 +1,9 @@
 const cart = ["Shoe", "Laptop", "Mouse", "Keyboard", "Phone"];
 
-const GITHUB_API = "https://api.github.com/users/Joydeep279";
-const user = fetch(GITHUB_API);
-console.log(user);
-
-user.then((res) => {
-  console.log(res);
-});
+const API_URL = "https://api.github.com/users/akshaymarch7";
+const apiData = fetch(API_URL);
+apiData
+  .then((orderID) => createOrder(orderID))
+  .then((res) => proceedToPayment(res))
+  .then((res) => updateCart(res))
+  .then((paymentId) => FinalStage(paymentId));
